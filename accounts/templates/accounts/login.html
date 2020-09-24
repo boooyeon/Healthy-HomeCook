@@ -8,24 +8,24 @@
 <br>
 {% endif %}
 <br>
-<h1 style="text-align: center;">Login</h1>
+<h1 style="text-align: center;">로그인</h1>
 <br>
 <br>
 <form style="text-align: center;" method="POST" action="{% url 'login'%}">
 
     {% csrf_token %}
-    Username:
+    아이디:
     <br>
-    <input name="username" type="text" value="">
-    <br>
-    <br>
-    Password:
-    <br>
-    <input name="password" type="password" value="">
+    <input name="username" type="text" value="" style="border-radius:1rem;">
     <br>
     <br>
+    비밀번호:
     <br>
-    <input class="btn btn-primary" type="submit" value="Login">
+    <input name="password" type="password" value="" style="border-radius:1rem;">
+    <br>
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="로그인" style="background-color:#C80E47;border: none;">
 </form>
 
 {% endblock %}
