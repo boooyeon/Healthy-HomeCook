@@ -49,7 +49,7 @@
         <form action="search_result/" method="POST">
             {% csrf_token %}
         <div class="input-group mb-3">
-            <input type="text" name="search" class="form-control" aria-label="Username" placeholder="ex) 양파, 달래, 당근, ...">
+            <input type="text" name="search" class="form-control" aria-label="Username" placeholder="ex) 양파, 달래, 당근, ..." style="border-radius: 5rem;">
         </div>
         <p>
           <button type="submit" name="submit" value="search" class="btn btn-primary my-2" id="find">요리법 찾기</button>
