@@ -6,8 +6,8 @@
   }
   @media (min-width: 768px) {
     .jumbotron {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
   }
 }
   
@@ -38,8 +38,9 @@
   }
 
   .btm_image {
-    width: 13rem;
-    height: 13rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    border: none;
   }
 
   #img_btn {
@@ -58,8 +59,8 @@
   }
 
   #kings {
-    margin-left: 18rem;
-    margin-right: 18rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     display: flex;
     justify-content: space-between;
   }
