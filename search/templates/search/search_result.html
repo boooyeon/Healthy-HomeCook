@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -58,6 +62,25 @@
                     </div>
                     {% endfor %}
 
+<<<<<<< HEAD
+=======
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for video in videos %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{video.thumbnail}}"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                aria-label="Placeholder: Thumbnail"></img>
+              <div class="card-body">
+                <p class="card-text">{{video.title}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a type="button" href={{ video.url }} class="btn btn-sm btn-outline-secondary" style="background-color: #C80E47; color:white; border:none;">재생</a>
+                  </div>
+                  <!-- <small class="text-muted">{{video.duration}} mins</small> -->
+>>>>>>> c1a05c81f3ea5a02e912aef50de2836a3289511f
                 </div>
             </div>
         </div>
@@ -66,3 +89,5 @@
 </body>
 
 </html>
+
+{% endblock %}
