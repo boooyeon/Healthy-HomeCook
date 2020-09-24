@@ -61,23 +61,3 @@ def index(request):
 
     return render(request, 'search/search_result.html', context)
 
-def SearchFormView(request):
-    rq = request
-    print(rq)
-    sort1 = request.GET.get('name')
-  
-    # queryset=Channel.objects.all()
-    # for row in queryset.values_list():
-    #     print(row)
-    
-    # print(sort1)
-    # print(sort2)
-    # queryset = Channel.objects.all()
-    # for row in queryset.values_list():
-    #     print (row)
-    Channel.objects.all()
-    obs = Channel.objects.filter(food_name=name).only( "video_title", "video_link")
-    
-    context = {'obs':obs}
-    print(obs)
-    return render(request,'mylist/searchresult.html' , context)

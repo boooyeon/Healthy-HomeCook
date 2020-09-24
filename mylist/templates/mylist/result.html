@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>토마토야 안녕</h1>
+
+        <table border="2">
+            <tread>
+            <tr>
+                <td>CHECK</td>
+                <td>VIDEO_TITLE</td>
+                <td>VIDEO_LINK</td>
+               
+            </tr>    
+            </tread>
+            <tbody>
+                {% for ob in obs %}
+                <td><input type="checkbox" name="chk_info" value="{{ob.id}}"></td>
+                <td>{{ob.video_title}}</td>
+                <td style="width: 400px; height: 200px;">                                        
+                    <div style="position: relative; height:0; padding-bottom: 56.25%;">
+                        <iframe width="1000" height="800" src="{{ob.video_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width:390px; height:220px;">{{ob.video_link}}</iframe>
+                    </div>
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 {% endblock %}

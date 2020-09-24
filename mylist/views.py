@@ -13,22 +13,24 @@ def mylist(request):
     return render(request, 'mylist/mylist.html')
 
 def SearchFormView(request):
-    print("!!!!!!!!!!!!!!")
-
-    sort1 = request.POST.get()
+    if request.method =='GET':
+        sort1 = request.GET['selected']
+        print("※",sort1)
+    else:
+        print("POST")
   
     # queryset=Channel.objects.all()
     # for row in queryset.values_list():
     #     print(row)
     
-    print(sort1)
+    # print(sort1)
     # print(sort2)
     # queryset = Channel.objects.all()
     # for row in queryset.values_list():
     #     print (row)
     Channel.objects.all()
-    obs = Channel.objects.filter(food_name=sort1).only( "video_title", "video_link")
+    obs = Channel.objects.filter(food_name=sort1).only("video_title", "video_link")
     
     context = {'obs':obs}
     print(obs)
-    return render(request,'mylist/result.html')
+    return render(request,'mylist/result.html',context)

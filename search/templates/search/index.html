@@ -57,13 +57,13 @@
         </form>
       </div>
     </section>
-    <form action="{% url 'result' %}" method="POST">
+    <form action="{% url 'result' %}" method="GET">
         {% csrf_token %}
-          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="토마토" value="토마토"></button>
-          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="마늘" value="마늘"></button>
-          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="생강" value="생강"></button>
-          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="도라지" value="도라지"></button>
-          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="두릅" value="두릅"></button>
+          <button type="submit" name ='selected' class="btm_image" id="img_btn" value="토마토"><img src="/static/search/img/images.jpg" alt="토마토" value="토마토"></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="마늘"><img src="/static/search/img/images.jpg" alt="마늘" value="마늘"></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="생강"><img src="/static/search/img/images.jpg" alt="생강" value="생강"></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="도라지"><img src="/static/search/img/images.jpg" alt="도라지" value="도라지"></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="두릅"><img src="/static/search/img/images.jpg" alt="두릅" value="두릅"></button>
     </form>
 
 

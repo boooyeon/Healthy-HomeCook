@@ -7,5 +7,6 @@ urlpatterns = [
      path('myprofile/', views.myprofile, name='myprofile'),
      path('mylist/', views.mylist, name='mylist'),
      path('result/', views.SearchFormView, name='result'),
+ 
      
 ]
