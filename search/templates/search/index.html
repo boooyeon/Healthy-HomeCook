@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Search YouTube</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'search/album.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">면역력 강화 음식요리를<br>검색해보세요:)</h1>
+        {% comment %} <p class="lead text-muted">Get the top nine results on YouTube for your query!</p> {% endcomment %}
+        <form action="search_result/" method="POST">
+            {% csrf_token %}
+        <div class="input-group mb-3">
+            <input type="text" name="search" class="form-control" aria-label="Username">
+        </div>
+        <p>
+          <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
+          {% comment %} <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button> {% endcomment %}
+        </p>
+        </form>
+      </div>
+    </section>
+
+    <table style="margin-left: auto; margin-right: auto;">
+      <tr><!-- 첫번째 줄 시작 -->
+        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토" name=></a></td>
+        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
+        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
+        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
+        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
+      </tr><!-- 첫번째 줄 끝-->
+    </table>
+
+
+  </main>
+</body>
+
+</html>
+
+{% endblock %}
