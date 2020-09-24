@@ -44,14 +44,15 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">면역력 강화 음식요리를<br>검색해보세요:)</h1>
+        <div><br/></div>
         {% comment %} <p class="lead text-muted">Get the top nine results on YouTube for your query!</p> {% endcomment %}
         <form action="search_result/" method="POST">
             {% csrf_token %}
         <div class="input-group mb-3">
-            <input type="text" name="search" class="form-control" aria-label="Username">
+            <input type="text" name="search" class="form-control" aria-label="Username" placeholder="ex) 양파, 달래, 당근, ...">
         </div>
         <p>
-          <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
+          <button type="submit" name="submit" value="search" class="btn btn-primary my-2" id="find">요리법 찾기</button>
           {% comment %} <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button> {% endcomment %}
         </p>
         </form>
@@ -59,11 +60,13 @@
     </section>
     <form action="{% url 'result' %}" method="GET">
         {% csrf_token %}
-          <button type="submit" name ='selected' class="btm_image" id="img_btn" value="토마토"><img src="/static/search/img/images.jpg" alt="토마토" value="토마토"></button>
-          <button type="submit" name='selected' class="btm_image" id="img_btn" value="마늘"><img src="/static/search/img/images.jpg" alt="마늘" value="마늘"></button>
-          <button type="submit" name='selected' class="btm_image" id="img_btn" value="생강"><img src="/static/search/img/images.jpg" alt="생강" value="생강"></button>
-          <button type="submit" name='selected' class="btm_image" id="img_btn" value="도라지"><img src="/static/search/img/images.jpg" alt="도라지" value="도라지"></button>
-          <button type="submit" name='selected' class="btm_image" id="img_btn" value="두릅"><img src="/static/search/img/images.jpg" alt="두릅" value="두릅"></button>
+        <div id="kings">
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="토마토"><img class="btm_image" id="food_img" src="/static/search/img/토마토.jpg" alt="토마토" value="토마토"><div><br/></div><div>토마토</div></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="마늘"><img class="btm_image" id="food_img" src="/static/search/img/마늘.jpg" alt="마늘" value="마늘"><div><br/></div><div>마늘</div></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="생강"><img class="btm_image" id="food_img" src="/static/search/img/생강.jpg" alt="생강" value="생강"><div><br/></div><div>생강</div></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="도라지"><img class="btm_image" id="food_img" src="/static/search/img/도라지.jpg" alt="도라지" value="도라지"><div><br/></div><div>도라지</div></button>
+          <button type="submit" name='selected' class="btm_image" id="img_btn" value="두릅"><img class="btm_image" id="food_img" src="/static/search/img/두릅.jpg" alt="두릅" value="두릅"><div><br/></div><div>두릅</div></button>
+        </div>
     </form>
 
 

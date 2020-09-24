@@ -36,3 +36,35 @@
     display: flex;
     justify-items: center;
   }
+
+  .btm_image {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  #img_btn {
+    background-color: white;
+    border-radius: 10rem;
+    border-color: white;
+    font-size: 1.3rem;
+  }
+
+  #food_img {
+    border-radius: 5.8rem;
+    box-shadow:
+      0 30px 60px 12px rgba(0, 0, 33, 0.05),
+      0 4px 24px 0 rgba(0, 0, 33, 0.05),
+      0 0 1px 0 rgba(0, 0, 33, 0.09) ;
+  }
+
+  #kings {
+    margin-left: 18rem;
+    margin-right: 18rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #find {
+    background-color: #C80E47;
+    border: none;
+  }
