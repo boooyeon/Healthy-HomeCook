@@ -14,7 +14,7 @@ def index(request):
 
         search_params = {
             'part': 'snippet',
-            'q': request.POST['search'],
+            'q': request.POST['search']+'요리',
             'key': settings.YOUTUBE_DATA_API_KEY,
             'type': 'video',
             'maxResults' : 9,
@@ -60,4 +60,3 @@ def index(request):
     }
 
     return render(request, 'search/search_result.html', context)
-
