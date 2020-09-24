@@ -4,7 +4,7 @@
 
 
 {% csrf_token %}
-<div class="album py-5 bg-light">
+<div class="album py-5 bg-white">
     <div class="container">
         <div class="row">
             {% for ob in obs %}
@@ -21,7 +21,11 @@
                             </div>
                         </div>
                         <div>
-                            <input class="btn" type="submit" value="+">
+                    </form>
+                            <form action="{% url 'mylist' %}" method='POST'>
+                            {% csrf_token %}
+                            <button class="btn" type="submit" name="chk_info" value="{{ob.id}}" style="font-size:3rem">+</button>
+                            </form>
                         </div>            
                     </div>
                        

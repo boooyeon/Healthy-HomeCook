@@ -32,6 +32,34 @@ def myprofile(request):
     return render(request, 'mylist/myprofile.html')
 
 def mylist(request):
+    print("hello!!!!")
+    if request.method == 'GET':
+        print("나는 GET")
+        obs = Cart.objects.all()
+        # obs = Cart.objects.filter(health_type = sort1, health_part = sort2).only("channel_name", "health_type", "health_part", "video_title", "video_link", "video_view_num", "video_upload_date")
+        context = {'obs':obs}
+
+        print("※",obs)
+        return render(request, 'mylist/mylist.html',context)
+
+    elif request.method == 'POST':
+        print("나는 POST")
+        context = request.POST
+        print("!!!!!~~~",request.user.username)
+        if request.method =='POST':
+            print("★",request.POST['chk_info'])
+            chch = Channel.objects.get(pk=request.POST['chk_info'])
+            print("obssssssssssssss!!!!!!!",chch.food_name)
+            Cart.objects.create(
+                user_id =request.user.username,
+                ch_name = chch.food_name,
+                title = chch.video_title,
+                link = chch.video_link,
+            )
+        return render(request, 'mylist/mylist.html')
+    else:
+        print("나는 뭘까?")
+
     return render(request, 'mylist/mylist.html')
 
 def SearchFormView(request):
