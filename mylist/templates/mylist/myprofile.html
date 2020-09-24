@@ -19,8 +19,9 @@
                 </div>
             </div>
             <div class="button">
-                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내가 만든 음식 사진 업로드</button>
-                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내가 찜한 영상 장바구니</button>
+                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내 음식 사진 업로드</button>
+                <input type="file" name="mainphoto" value="search2" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">
+                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내가 찜한 영상</button>
             </div>
         </div>
         <div class="mypictures" style="height: 38rem; width: 45rem; background-color: #C80E47; border-radius: 1rem;">
@@ -32,7 +33,7 @@
             <img class="picture" src="/static/search/img/6.jpg">
             <img class="picture" src="/static/search/img/7.jpg">
             <img class="picture" src="/static/search/img/8.jpg">
-            <div class="picture" height="32%" width="32%"></div>
+            <img class="picture" src='{{obs.image.url}}'> 
         </div>
     </div>
   

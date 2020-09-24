@@ -1,7 +1,7 @@
 from django.contrib import admin
 # from import_export.admin import ExportActionModelAdmin, ImportExportMixin, ImportMixin
 
-from .models import Channel,Cart
+from .models import Channel,Cart,Profile
 from django.conf import settings
 
 
@@ -20,5 +20,6 @@ class ChannelAdmin(admin.ModelAdmin):
 
 admin.site.register(Channel, ChannelAdmin)
 admin.site.register(Cart)
+admin.site.register(Profile)
 # admin.site.unregister(User)
 # admin.site.register(User, CustomUserAdmin)

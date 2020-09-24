@@ -7,6 +7,28 @@ from .models import Channel, Cart
 # Create your views here.
 
 def myprofile(request):
+    print("hello~~~~")
+    if request.method == 'POST':
+        print("~~~~~~~~!")
+        mainphoto = request.POST.get('mainphoto','0')
+        print(mainphoto)
+        print("§",request.POST)
+        print(request.user.username)
+        if mainphoto == '0':
+            obs = Profile.objects.all()
+                
+            context = {'obs':obs}
+
+            print("※",obs)
+            return render(request, 'mylist/myprofile.html',context)
+        else:
+            print("null 아님")
+            # Profile.objects.create(
+            #     user =request.user.username,
+            #     image = request.POST.get('mainphoto'),
+            #     comment = '안녕',
+            #     is_public = True
+        
     return render(request, 'mylist/myprofile.html')
 
 def mylist(request):
