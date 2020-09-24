@@ -1,13 +1,4 @@
-img{
-    border: 3px solid gold;
-    border-radius: 50px;
-    -moz-border-radius: 50px;
-    -khtml-border-radius: 50px;
-    -webkit-border-radius: 50px;
-}
-
 .profile{
-    padding-top: 5%;
     display: flex;
     justify-content: center;
 }
@@ -18,3 +9,7 @@ img{
 
 }
 
+#progress {
+    display: flex;
+    justify-content: center;
+}
