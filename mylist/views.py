@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from django.http import HttpResponse
 from django import forms
+from .models import Channel, Cart
 # Create your views here.
 
 def myprofile(request):
@@ -12,22 +13,22 @@ def mylist(request):
     return render(request, 'mylist/mylist.html')
 
 def SearchFormView(request):
-    # rq = request
-    # print(rq)
-    # sort1 = request.GET.get('sort-select1','')
-    
-    # # queryset=Channel.objects.all()
-    # # for row in queryset.values_list():
-    # #     print(row)
-    
-    # # print(sort1)
-    # # print(sort2)
-    # # queryset = Channel.objects.all()
-    # # for row in queryset.values_list():
-    # #     print (row)
-    # Channel.objects.all()
-    # obs = Channel.objects.filter(food_name = sort1).only("video_title", "video_link")
-    
-    # context = {'obs':obs}
+    print("!!!!!!!!!!!!!!")
 
-    return render(request, 'mylist/result.html')
+    sort1 = request.POST.get()
+  
+    # queryset=Channel.objects.all()
+    # for row in queryset.values_list():
+    #     print(row)
+    
+    print(sort1)
+    # print(sort2)
+    # queryset = Channel.objects.all()
+    # for row in queryset.values_list():
+    #     print (row)
+    Channel.objects.all()
+    obs = Channel.objects.filter(food_name=sort1).only( "video_title", "video_link")
+    
+    context = {'obs':obs}
+    print(obs)
+    return render(request,'mylist/result.html')

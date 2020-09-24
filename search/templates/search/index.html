@@ -57,16 +57,14 @@
         </form>
       </div>
     </section>
-
-    <table style="margin-left: auto; margin-right: auto;">
-      <tr><!-- 첫번째 줄 시작 -->
-        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토" name=></a></td>
-        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
-        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
-        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
-        <td><a href="{% url 'result' %}"><img src="/static/search/img/images.jpg" alt="토마토"></a></td>
-      </tr><!-- 첫번째 줄 끝-->
-    </table>
+    <form action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="토마토" value="토마토"></button>
+          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="마늘" value="마늘"></button>
+          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="생강" value="생강"></button>
+          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="도라지" value="도라지"></button>
+          <button type="submit" class="btm_image" id="img_btn"><img src="/static/search/img/images.jpg" alt="두릅" value="두릅"></button>
+    </form>
 
 
   </main>
