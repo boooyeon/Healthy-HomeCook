@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<<<<<<< HEAD
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
@@ -25,26 +24,5 @@
     </div>
 </div>
 
-=======
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                {% for ob in obs %}
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" >
-                        <iframe width="100%" height="225" src='http://www.youtube.com/embed/{{ob.video_link}}' frameborder="0" allowfullscreen></iframe>
-                        </img>
-                        <div class="card-body">
-                            <p class="card-text">{{ob.video_title}}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
->>>>>>> 88b6ad6672e4cdc5781da1baa4955dde78cbc8f6
+
 {% endblock %}
