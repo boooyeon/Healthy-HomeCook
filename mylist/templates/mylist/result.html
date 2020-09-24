@@ -1,47 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-        <table border="2">
-            <tread>
-            <tr>
-
-                <td>영상</td>
- 
-            </tr>    
-            </tread>
-
-            <tbody>
-                {% for ob in obs %}
-   
-                <td style="width: 600px; height: 100px;">                                        
-                    
-                    <div>
-                         <!-- {{ob.video_title}} -->
-                         <!-- {{ob.video_link}} -->
-                         <!-- <button type="button" onclick="location.href='http://img.youtube.com/vi/QTqXyjiORJw/0.jpg'">재생</button> -->
-                         <!-- <a href="http://www.youtube.com/embed/{{ob.video_link}}"> -->
-                            <button type="button" onclick="location.href='http://www.youtube.com/embed/{{ob.video_link}}'">
-                                {{ob.video_title}}
-                                <img src='http://img.youtube.com/vi/{{ob.video_link}}/0.jpg'>
-                                </button>
-                        <!-- </a> -->
-                        <div class='item-vido'>                        
-                        <!-- <iframe width='100%' height='100%' src= "http://www.youtube.com/embed/QTqXyjiORJw"> -->
-                        </iframe> </div>
-                         <!-- </button> -->
-                         
-                         
-                         <!-- 썸네일 : 'http://img.youtube.com/vi/'+ob.video_link+'/0.jpg' -->
-                         
-                         <!-- <div class='item-vido'><iframe width='100%' height=100% src= '"http://img.youtube.com/vi/"+ob.video_link+"/0.jpg"'></iframe> </div> -->
-                         <!-- <img src='"http://img.youtube.com/vi/"+ob.video_link+"/1.jpg"'>    -->
-                            <!-- <div class='item-vido '><iframe width='100%' height=100% src= {{ob.video_link}}></iframe> </div>  -->
-                        <!-- <iframe id="youtube_video" src={{ob.video_link}}></iframe> -->
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {% for ob in obs %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img class="bd-placeholder-img card-img-top">
+                    <iframe width="100%" height="225" src='http://www.youtube.com/embed/{{ob.video_link}}'
+                        frameborder="0" allowfullscreen></iframe>
+                    </img>
+                    <div class="card-body">
+                        <p class="card-text">{{ob.video_title}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
                     </div>
-                </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
 {% endblock %}
