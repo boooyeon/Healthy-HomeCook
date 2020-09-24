@@ -1,3 +1,8 @@
+.mywrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .profile{
     display: flex;
     justify-content: center;
@@ -5,11 +10,24 @@
 
 .button{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
 }
 
 #progress {
     display: flex;
     justify-content: center;
+}
+
+.mypictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.picture {
+    height: 32%;
+    width: 32%;
+    border-radius: 1rem;
+    background-color: white;
 }

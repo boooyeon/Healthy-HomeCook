@@ -3,24 +3,38 @@
 {% block content %}
 {% load static %}
 <link rel='stylesheet' type="text/css" href="{% static 'style.css' %}"/>
-    <div class="profile">
-        <div id="profile_img">
-            <img src="/static/search/img/3단계.jpg" height="400rem" width="400rem" />
-        </div>
-    </div>
-    <br>
-    <div id="progress" style="margin-bottom: 1rem;">
-        <div class="progress" style="width: 40rem; height: 2rem; background-color: lavender;">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%; background-color:#C80E47">
-                60%
+    <div class="mywrap">
+        <div class="myprofile" style="height: 38rem; width: 40rem;">
+            <div class="profile">
+                <div id="profile_img">
+                    <img src="/static/search/img/3단계.jpg" height="400rem" width="400rem" />
+                </div>
+            </div>
+            <br>
+            <div id="progress" style="margin-bottom: 1rem;">
+                <div class="progress" style="width: 40rem; height: 2rem; background-color: lavender;">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%; background-color:#C80E47">
+                        60%
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내가 만든 음식 사진 업로드</button>
+                <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none;">내가 찜한 영상 장바구니</button>
             </div>
         </div>
+        <div class="mypictures" style="height: 38rem; width: 45rem; background-color: #C80E47; border-radius: 1rem;">
+            <img class="picture" src="/static/search/img/1.jpg">
+            <img class="picture" src="/static/search/img/2.jpg">
+            <img class="picture" src="/static/search/img/3.jpg">
+            <img class="picture" src="/static/search/img/4.jpg">
+            <img class="picture" src="/static/search/img/5.jpg">
+            <img class="picture" src="/static/search/img/6.jpg">
+            <img class="picture" src="/static/search/img/7.jpg">
+            <img class="picture" src="/static/search/img/8.jpg">
+            <div class="picture" height="32%" width="32%"></div>
+        </div>
     </div>
-    <div class="button">
-        <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none; margin-right: 3rem;">내가 만든 음식 사진 업로드</button>
-        <button type="submit" name="submit" value="search" class="btn btn-primary my-2" style="background-color: #C80E47; border:none; margin-left: 3rem;">내가 찜한 영상 장바구니</button>
-    </div>
-    
   
 
 {% endblock %}
