@@ -8,28 +8,28 @@
 <br>
 {% endif %}
 <br>
-<h1 style="text-align: center;">Sign Up!</h1>
+<h1 style="text-align: center;">회원가입</h1>
 <br>
 <br>
 <form style="text-align: center;" method="POST" action="{% url 'signup'%}">
 {% csrf_token %}
-Username:
+아이디:
 <br>
-<input name="username"  type="text" value="">
-<br>
-<br>
-Password:
-<br>
-<input name="password1"  type="password" value="">
+<input name="username"  type="text" value="" style="border-radius:1rem;">
 <br>
 <br>
-Confirm Password:
+비밀번호:
 <br>
-<input name="password2"  type="password" value="">
+<input name="password1"  type="password" value="" style="border-radius:1rem;">
+<br>
+<br>
+비밀번호 확인:
+<br>
+<input name="password2"  type="password" value="" style="border-radius:1rem;">
 <br>
 <br>
 <br>
-<input class="btn btn-primary" type="submit" value="Sign Up!">
+<input class="btn btn-primary" type="submit" value="회원가입" style="background-color:#C80E47;border: none;">
 </form>
 
 {% endblock %}
